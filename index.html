@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>oi</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html,body{
+                height: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <canvas id="fundo" width="400px" height="400px">
+
+        </canvas>
+    </body>
+    <script>
+        let tela = document.getElementById('fundo');
+        let ctx = tela.getContext("2d");
+        let pi = Math.PI;
+
+        function CreateFace(){
+            //background
+            ctx.beginPath();
+            ctx.rect(0,0,400,400);
+            ctx.fillStyle = '#454545'; 
+            ctx.fill();
+            ctx.closePath();
+            //face
+            ctx.beginPath();
+            ctx.arc(200,200,190,0,2*Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.closePath();
+            
+            //border
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            //circle middle
+            ctx.beginPath();
+            ctx.fillStyle = 'black';
+            ctx.arc(200,200,5,0,2*Math.PI);
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function a(){
+            ctx.translate(200,200);
+            for(var i=0;i<13;i++){
+                ctx.fillRect(0,0,100,100);
+            
+               //
+            }
+        }
+        
+        CreateFace();
+        console.log("funciona porra")
+        a();
+        console.log("funcionou essa caralha ?");
+
+    </script>
+</html>

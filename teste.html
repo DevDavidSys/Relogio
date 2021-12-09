@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>oi</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html,body{
+                height: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <canvas id="fundo" width="600px" height="600px" style="background-color: aquamarine;">
+
+        </canvas>
+    </body>
+    <script>
+
+        let tela = document.getElementById('fundo');
+        let ctx = tela.getContext("2d");
+        let pi = Math.PI;
+
+
+        ctx.translate(300,300);
+        ctx.arc(0,0,50,0,2*pi)
+        ctx.stroke();
+        
+        for(i=0;i<12;i++){
+            ctx.beginPath();
+            ctx.arc(30,0,5,0,2*pi);
+            ctx.stroke();
+            ctx.rotate(pi/6);
+            ctx.closePath();
+
+
+        }
+    </script>
+</html>
